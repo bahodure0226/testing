@@ -1,19 +1,132 @@
-@keyframes example {
-  0% {opacity:0%; left:0%;width:0px;}
-  25% {opacity:10%; left:10%; width:100px;}
-  50% {opacity:20%;left:20%; width:200px;}
-  75% {opacity:30%; left:30%; width:300px;}
-  100% {opacity:100%; left:45%; width:500px;}
-}
-div {
-  font-size:100px;
+@keyframes test {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+    color:red;
+  }
+  60% {
+    transform: scale(2);
+    opacity: 1;
+    color:blue;
+  }
+  100% {
+    transform: scale(0.6);
+    color:green;
+  }
+  }
+  .bye {
+    text-align:center;
+    text-transform:uppercase;
+    width:100%;
+    height: 50px;
+    font-size:50px;
+    background-color: #FFE5B4;
+    animation-name: test;
+    animation-duration:10s;
+    animation-iteration-count:infinite;
+    position:fixed;
+    top:70%;
+  }
+  #bulk {
+    background-color:purple;
+    width:200px;
+    height:100px;
+    animation-name:bulk;
+    animation-duration:1s;
+    animation-iteration-count:infinite;
+    position:fixed;
+  }
+  @keyframes bulk{
+    0% {
+      transform: scale(0.1);
+      opacity:0;
+      left:10%;
+    }
+    25% {
+      transform:scale(0.5);
+      opacity:0.5;
+      left:25%;
+    }
+    35% {
+      transform:scale(0.5);
+      opacity:1;
+      left:50%;
+    }
+    45% {
+      transform:scale(0.5);
+      left:80%;
+    }
+    50% {
+      transform:scale(0.5);
+      left:90%;
+    }
+    60% {
+      transform:scale(0.5);
+      left:70%;
+    }
+    70% {
+      transform:scale(0.5);
+      left:50%;
+    }
+    80% {
+      transform:scale(0.5);
+      left:25%;
+      opacity:1;
+    }
+    90% {
+      transform:scale(0.1);
+      left:0%;
+      opacity:0;
+    }
+  }
+#container {
+  color:#999;
   text-align:center;
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  position:absolute;
-  animation-name: example;
-  animation-duration:1s;
-  animation-fill-mode:both;
+  text-transform: uppercase;
+  font-size:36px;
+  font-weight:bold;
+  padding-top:200px;
+  position:fixed;
+  width:100%;
+  bottom:45%;
+  display:block;
+}
+
+#flip {
+  height:50px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background:#42c58a;
+}
+#flip div:first-child div {
+  background:#4ec7f3;
+}
+#flip div:last-child div {
+  background:#DC143C;
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
 }
 
